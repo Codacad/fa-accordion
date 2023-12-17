@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+div.accordian-wrapper{  
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+div.bg-pattern{
+  background-image: url('../assets/images/background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+div.accordian-wrapper div.accordian{
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 0px 30px rgba(0,0,0,.1);
+  padding: 2% 3%;
+  border-radius: 10px;
+}
+@media (max-width:720px){
+  div.accordian-wrapper div.accordian{
+    width: 95%;
+  }
+}
+div.accordian header{
+  display: flex;
+  gap: 20px;
+}
+div.accordian header h1{
+  font-size: 250%;
+  color: hsl(292, 42%, 14%);
+}
+div.accordian div.accordian-menu{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;  
+}
+div.accordian-menu div.menu{
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding: 20px 0;
+}
+div.accordian-menu div.menu:nth-child(4){
+  border-bottom: none;
+  padding-bottom: 0;
+}
+div.menu h1{
+  font-size: 110%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  color:hsl(292, 42%, 14%);
+  cursor: pointer;
+}
+div.menu .plun-minus-icon{
+  transition: all 300ms ease-in-out;
+}
+div.menu div.dropdown{
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+div.menu div.dropdown.toggle-accordian-dropdown{
+  max-height: 300px;
+  transition: max-height 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+div.menu div.dropdown p{
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: hsl(292, 16%, 49%);
+}
