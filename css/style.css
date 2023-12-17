@@ -5,7 +5,15 @@
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
 }
-
+div.attribution{
+  margin-bottom: 20px;
+  font-size: 14px;  
+}
+div.attribution a{
+  text-decoration: none;
+  color: rgba(0,0,0,.7);
+  font-weight: bold;
+}
 div.accordian-wrapper{  
   width: 100%;
   min-height: 100vh;
